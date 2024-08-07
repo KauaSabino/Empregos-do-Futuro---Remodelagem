@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+header{
+    height: 78px;
+    box-shadow: 0px 4px 10px #006db625;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    margin: 0 15px;
+}
+a{
+    text-decoration: none;
+    color: #006DB6;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+}
+a:hover{
+    text-decoration:underline;
+}
+main{
+    padding: 70px 200px;
+}
+.section-form{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+.section-form>div{
+    display: flex;
+    flex-direction: column;
+}
+.section-form>div>label>span{
+    color: #006DB6;
+}
+.boxCheck{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+h1{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #006DB6;
+}
+p{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+h2{
+    margin: 50px 0 15px 0;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #006DB6;
+}
+label{
+    font-size: 15px;
+    font-weight: 600;
+}
+input, select{
+    border: 2px solid #006db65b;
+    border-radius: 5px;
+    height: 27px;
+    padding: 0 5px;
+    
+}
+textarea{
+    border: 2px solid #006db65b;
+    border-radius: 5px;
+    padding: 5px;
+}
+input[type=checkbox]{
+    height: 27px;
+}
+input:focus, select:focus, textarea:focus{
+    border: 2px solid #006DB6;
+    outline: 0;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+input[type=submit], button{
+    height: 40px;
+    background: #006DB6;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    border: none;
+    padding: 0 5px;
+}
+ 

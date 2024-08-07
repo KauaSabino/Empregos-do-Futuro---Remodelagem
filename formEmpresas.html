@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/formEmpresas.css">
+    <link rel="shortcut icon" href="./src/img/logo.png" type="image/x-icon">
+    <title>Cadastro de Vagas</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./src/img/logo.png" alt="Logo - Empregos do Futuro"></a>
+        <nav>
+            <ul>
+                <li><a href="./index.jsp">Vagas</a></li>
+                <li><a href="./formEmpresas.html">Empresas</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./login.html">Enviar Currículo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Empresas</h1>
+        <p>Preencha as informações pedidas abaixo sobre sua empresa e sua vaga de empresa para que ela seja postada em nosso site.</p>
+        
+        <form method="post" action="cadastroEmpresa2.jsp">
+            <h2>Empresa</h2>
+            <div class="section-form">
+                <div>
+                    <label for="razaoSocial">Razão social: <span>*</span></label>
+                    <input type="text" name="razaoSocial" id="" required>
+                </div>
+                <div>
+                    <label for="nomeFantasia">Nome fantasia: </label>
+                    <input type="text" name="nomeFantasia" id="">
+                </div>
+                <div>
+                    <label for="cnpj">CNPJ: <span>*</span></label>
+                    <input type="number" name="cnpj" id="" required>
+                </div>
+                <div>
+                    <label for="servicoRealizado">Produto fabricado/Serviço realizado: <span>*</span></label>
+                    <input type="text" name="servicoRealizado" id="" required>
+                </div>
+                <div>
+                    <label for="cepEmpresa">CEP: <span>*</span></label>
+                    <input type="number" name="cepEmpresa" id="" required>
+                </div>
+                <div>
+                    <label for="estadoEmpresa">Estado: <span>*</span></label>
+                    <select name="estadoEmpresa" id="" required>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP" selected>São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cidadeEmpresa">Cidade: <span>*</span></label>
+                    <input type="text" name="cidadeEmpresa" id="" required>
+                </div>
+                <div>
+                    <label for="bairroEmpresa">Bairro: <span>*</span></label>
+                    <input type="text" name="bairroEmpresa" id="" required>
+                </div>
+                <div>
+                    <label for="enderecoEmpresa">Endereço: <span>*</span></label>
+                    <input type="text" name="enderecoEmpresa" id="" required>
+                </div>
+                <div>
+                    <label for="numeroEmpresa">Nº/Complemento: <span>*</span></label>
+                    <input type="number" name="numeroEmpresa" id="" required>
+                </div>
+                <div>
+                    <label for="emailEmpresa">E-mail: <span>*</span></label>
+                    <input type="email" name="emailEmpresa" id="" required>
+                </div>
+                <div>
+                    <label for="telEmpresa">Telefone: <span>*</span></label>
+                    <input type="tel" name="telEmpresa" id="" placeholder="(00) 0000-0000" required>
+                </div>
+                <div>
+                    <label for="celEmpresa">Celular: <span>*</span></label>
+                    <input type="tel" name="celEmpresa" id="" placeholder="(00) 00000-0000" required>
+                </div>
+                <div>
+                    <label for="responsavelEmpresa">Responsável: <span>*</span></label>
+                    <input type="text" name="responsavelEmpresa" id="" required>
+                </div>
+                <div>
+                    <label for="siteEmpresa">Site: </label>
+                    <input type="text" name="siteEmpresa" id="">
+                </div>
+                <div class="obs">
+                    <label for="observacoes">Observações: </label>
+                    <textarea name="observacoes" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <h2>Vaga</h2>
+            <div class="section-form">
+                <div>
+                    <label for="cargoVaga">Cargo: <span>*</span></label>
+                    <input type="text" name="cargoVaga" id="" required>
+                </div>
+                <div>
+                    <label for="quantVaga">Quantidade: <span>*</span></label>
+                    <input type="number" name="quantVaga" id="" required>
+                </div>
+                <div>
+                    <label for="salarioVaga">Salário: </label>
+                    <input type="number" name="salarioVaga" id="">
+                </div>
+                <div>
+                    <label for="enderecoVaga">Endereço: <span>*</span></label>
+                    <input type="text" name="enderecoVaga" id="" required>
+                </div>
+                <div>
+                    <label for="tipoVaga">Tipo de contratação: <span>*</span></label>
+                    <select name="tipoVaga" id="" required>
+                        <option value="clt">CLT</option>
+                        <option value="estagio">Estágio</option>
+                        <option value="jovemAprendiz">Jovem Aprendiz</option>
+                        <option value="pj">Pessoa Jurídica</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="formacaoVaga">Formação: <span>*</span></label>
+                    <select name="formacaoVaga" id="" required>
+                        <option value="superiorCompleto">Superior Completo</option>
+                        <option value="superiorIncompleto">Superior Incompleto</option>
+                        <option value="medioCompleto">Ensino Médio Completo</option>
+                        <option value="medioIncompleto">Ensino Médio Incompleto</option>
+                        <option value="fundamentalCompleto">Ensino Fundamental Completo</option>
+                        <option value="fundamentalIncompleto">Ensino Fundamental Incompleto</option>
+                        <option value="tecnico">Técnico</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pcd">Pessoa com deficiência: <span>*</span></label>
+                    <select name="pcd" id="" required>
+                        <option value="nao">Não</option>
+                        <option value="sim">Sim</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Adicionais: </label>
+                    <div class="boxCheck">
+                        <input type="checkbox" name="insalubridade" id="">
+                        <label for="">Insalubridade</label>
+                        <input type="checkbox" name="periculosidade" id="">
+                        <label for="">Periculosidade </label>
+                        <input type="checkbox" name="noturno" id="">
+                        <label for="">Adicional noturno </label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="">Condução própria: </label>
+                    <div class="boxCheck">
+                        <input type="checkbox" name="carro" id="">
+                        <label for="">Carro</label>
+                        <input type="checkbox" name="moto" id="">
+                        <label for="">moto</label>
+                    </div>
+                </div>
+                <div class="obs">
+                    <label for="descVaga">Descrição da vaga: </label>
+                    <textarea name="descVaga" id="" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="obs">
+                    <label for="beneficiosVaga">Benefícios: </label>
+                    <textarea name="beneficiosVaga" id="" cols="30" rows="10" required></textarea>
+                </div>
+            </div>
+            <input type="submit" value="Salvar e prosseguir">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

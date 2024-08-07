@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+body{
+    background-image: linear-gradient(to left bottom, #b9e3ff, #bee3fc, #c3e4f9, #c8e4f7, #cde4f4);
+}
+header{
+    height: 78px;
+    box-shadow: 0px 4px 10px #006db625;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    background: #fff;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    margin: 0 15px;
+}
+li>a{
+    text-decoration: none;
+    color: #006DB6;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+}
+a:hover{
+    text-decoration:underline;
+}
+main{
+    padding: 70px 200px;
+}
+h1{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #006DB6;
+    margin-bottom: 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    padding: 70px 30px;
+    box-shadow: 0px 0px 15px #006db625;
+}
+#box01{
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+}
+#box01>a{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000ce;
+}
+#box01>p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#box02{
+    background-color: #006DB6;
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+}
+#box02>h2{
+    font-size: 20px;
+}
+#box02>p{
+    font-size: 15px;
+}
+#box02>b{
+    font-size: 16px;
+}
+#box02>a{
+    color: #fff;
+    font-weight: 500;
+}
+form>div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 9px;
+}
+label{
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+}
+input{
+    border: 2px solid #006db65b;
+    border-radius: 5px;
+    height: 27px;
+    padding: 0 5px;
+    width: 250px;
+}
+input:focus{
+    border: 2px solid #006DB6;
+    outline: 0;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+input[type=submit]{
+    height: 40px;
+    background: #006DB6;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 17px;
+    border: none;
+    padding: 0 5px;
+    cursor: pointer;
+}

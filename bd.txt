@@ -1,0 +1,99 @@
+CREATE DATABASE EmpregosDoFuturo;
+USE EmpregosDoFuturo;
+
+
+CREATE TABLE Usuario(
+	idUser INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	cpf CHAR(11) NOT NULL,
+    email VARCHAR(60) NOT NULL,
+    senha VARCHAR(60) NOT NULL
+);
+
+CREATE TABLE Curriculo (
+    idCurriculo INT AUTO_INCREMENT PRIMARY KEY,
+    idUser INT,
+    nome VARCHAR(100) NOT NULL,
+    dataNascimento DATE NOT NULL,
+    sexo CHAR(1) NOT NULL,
+    nomeSocial VARCHAR(100),
+    cpf CHAR(11) NOT NULL,
+    nacionalidade VARCHAR(50),
+    celular CHAR(11) NOT NULL,
+    nomeContato VARCHAR(100) NOT NULL,
+    formacao varchar(40) NOT NULL,
+    pretensaoSalarial DECIMAL(10, 2),
+    cnh BOOLEAN NOT NULL,
+    categoriaCnh VARCHAR(5),
+    deficiencia BOOLEAN NOT NULL,
+    
+    cep VARCHAR(8) NOT NULL,
+    estado VARCHAR(2) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    endereco VARCHAR(100) NOT NULL,
+    numero int NOT NULL,
+    primeiroEmprego BOOLEAN NOT NULL,
+    nomeEmprego VARCHAR(100) NOT NULL,
+    cargoEmprego VARCHAR(100) NOT NULL,
+    ramo VARCHAR(255) NOT NULL,
+    dataInicio DATE NOT NULL,
+    dataSaida DATE,
+    tipoContrato VARCHAR(50) NOT NULL,
+    descHabilidades TEXT NOT NULL,
+    resumoProfissional TEXT,
+    objetivos TEXT
+);
+ALTER TABLE Usuario
+ADD CONSTRAINT FK_idCurriculo FOREIGN KEY (idCurriculo)
+REFERENCES Curriculo(idCurriculo);
+
+ALTER TABLE Curriculo
+ADD CONSTRAINT FK_idUser FOREIGN KEY (idUser)
+REFERENCES Usuario(idUser);
+
+CREATE TABLE Empresa (
+    idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
+    cnpj VARCHAR(14) NOT NULL,
+    razaoSocial VARCHAR(180) NOT NULL,
+    nomeFantasia VARCHAR(180),
+    areaServico VARCHAR(150),
+    cep VARCHAR(8),
+    estado VARCHAR(2),
+    cidade VARCHAR(100),
+    bairro VARCHAR(100),
+    endereco VARCHAR(255),
+    email VARCHAR(100),
+    telefone VARCHAR(11),
+    celular VARCHAR(11),
+    responsavel VARCHAR(255),
+    site VARCHAR(255),
+    observacao TEXT
+);
+
+CREATE TABLE Vaga (
+    idVaga INT PRIMARY KEY AUTO_INCREMENT,
+    idEmpresa INT,
+    cargo VARCHAR(255),
+    quant INT,
+    salario DECIMAL(10, 2),
+    local VARCHAR(255),
+    tipoContratacao VARCHAR(50),
+    formacao VARCHAR(255),
+    idioma VARCHAR(255),
+    pcd BOOLEAN,
+    descricaoHabilidades TEXT,
+    beneficios TEXT,
+    FOREIGN KEY (idEmpresa) REFERENCES Empresa(idEmpresa)
+);
+
+CREATE TABLE Aplicacao (
+    idAplicacao INT PRIMARY KEY AUTO_INCREMENT,
+    idVaga INT,
+    idUser INT,
+    idCurriculo INT,
+    FOREIGN KEY (idVaga) REFERENCES Vaga(idVaga),
+    FOREIGN KEY (idUser) REFERENCES Usuario(idUser),
+    FOREIGN KEY (idCurriculo) REFERENCES Curriculo(idCurriculo)
+);
+
+

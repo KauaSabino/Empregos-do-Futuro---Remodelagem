@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/formCurriculo.css">
+    <title>Cadastrar Currículo</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./src/img/logo.png" alt="Logo - Empregos do Futuro"></a>
+        <nav>
+            <ul>
+                <li><a href="./index.jsp">Vagas</a></li>
+                <li><a href="./formEmpresas.html">Empresas</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./login.html">Enviar Currículo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Currículo</h1>
+        <p>Para se candidatar e aproveitar as oportunidades disponíveis, por favor, preencha o formulário abaixo. Seu interesse é fundamental para explorarmos novos caminhos juntos.</p>
+        
+        <form method="post" action="grava2.jsp">
+            <h2>Dados para login</h2>
+            <div class="section-form">
+                <div>
+                    <label for="cpf">CPF: <span>*</span></label>
+                    <input type="number" name="cpf" id="" placeholder="000.000.000-00" required>
+                </div>
+                <div>
+                    <label for="email">E-mail: <span>*</span></label>
+                    <input type="email" name="email" id="" required>
+                </div>
+                <div>
+                    <label for="senha">Senha: <span>*</span></label>
+                    <input type="password" name="senha" id="" required>
+                </div>
+                <div>
+                    <label for="confSenha">Confirme a senha: <span>*</span></label>
+                    <input type="password" name="confSenha" id="" required>
+                </div>
+            </div>
+
+            <h2>Informações pessoais</h2>
+            <div class="section-form">
+                
+                <div>
+                    <label for="nome">Nome Completo: <span>*</span></label>
+                    <input type="text" name="nome" id="" required>
+                </div>
+                <div>
+                    <label for="nascimento">Data de Nascimento: <span>*</span></label>
+                    <input type="date" name="nascimento" id="" required>
+                </div>
+                <div>
+                    <label for="sexo">Sexo: <span>*</span></label>
+                    <select name="sexo" id=""  required>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="T">Transexuais e Travestis</option>
+                        <option value="N">Prefiro não dizer</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nomeSocial">Nome Social: </label>
+                    <input type="text" name="nomeSocial" id="">
+                </div>
+                <div>
+                    <label for="nacionalidade">Nacionalidade: </label>
+                    <input type="text" name="nacionalidade" id="">
+                </div>
+                <div>
+                    <label for="celular">Celular/WhatsApp: <span>*</span></label>
+                    <input type="tel" name="celular" id="" placeholder="(00) 00000-0000" required>
+                </div>
+                <div>
+                    <label for="nomeContato">Nome para contato: <span>*</span></label>
+                    <input type="text" name="nomeContato" id="" required>
+                </div>
+                <div>
+                    <label for="formacao">Formação: <span>*</span></label>
+                    <select name="formacao" id="" required>
+                        <option value="superior Completo">Superior Completo</option>
+                        <option value="superior Incompleto">Superior Incompleto</option>
+                        <option value="medio Completo">Ensino Médio Completo</option>
+                        <option value="medio Incompleto">Ensino Médio Incompleto</option>
+                        <option value="fundamental Completo">Ensino Fundamental Completo</option>
+                        <option value="fundamental Incompleto">Ensino Fundamental Incompleto</option>
+                        <option value="tecnico">Técnico</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pretensaoSalario">Pretensão salarial: <span>*</span></label>
+                    <input type="number" name="pretensaoSalario" id="" required>
+                </div>
+                <div>
+                    <label for="cnh">Possuí CNH: <span>*</span></label>
+                    <select name="cnh" id="cnh" onchange="verifCNH()" required>
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="categCnh">Categoria da CNH: <span>*</span></label>
+                    <input type="text" name="categCnh" id="categCnh" required disabled>
+                </div>
+                <div>
+                    <label for="deficiencia">Pessoa com deficiência: <span>*</span></label>
+                    <select name="deficiencia" id="deficiencia" onchange="verifDeficiencia()" required>
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                    </select>
+                </div>
+            </div>
+
+            <h2>Dados para Contato</h2>
+            <div class="section-form">
+                <div>
+                    <label for="cep">CEP: <span>*</span></label>
+                    <input type="number" name="cep" id="" required>
+                </div>
+                <div>
+                    <label for="estado">Estado: <span>*</span></label>
+                    <select name="estado" id="" required>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP" selected>São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cidade">Cidade: <span>*</span></label>
+                    <input type="text" name="cidade" id="" required>
+                </div>
+                <div>
+                    <label for="bairro">Bairro: <span>*</span></label>
+                    <input type="text" name="bairro" id="" required>
+                </div>
+                <div>
+                    <label for="endereco">Endereço: <span>*</span></label>
+                    <input type="text" name="endereco" id="" required>
+                </div>
+                <div>
+                    <label for="numero">Nº: <span>*</span></label>
+                    <input type="number" name="numero" id="" required>
+                </div>
+            </div>
+
+            <h2>Experiência</h2>
+            <div class="section-form">    
+                <div>
+                    <label for="primeiroEmprego">Primeiro emprego?: <span>*</span></label>
+                    <select name="primeiroEmprego" id="primeiroEmprego" onchange="verifEmprego()" required>
+                        
+                        <option value="0">Não</option>
+                        <option value="1">Sim</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nomeEmprego">Nome da empresa: <span>*</span></label>
+                    <input type="text" name="nomeEmprego" id="nomeEmprego" required>
+                </div>
+                <div>
+                    <label for="cargoEmprego">Cargo na empresa: <span>*</span></label>
+                    <input type="text" name="cargoEmprego" id="cargoEmprego" required>
+                </div>
+                <div>
+                    <label for="ramo">Ramo de atividade: <span>*</span></label>
+                    <input type="text" name="ramo" id="ramo" required>
+                </div>
+                <div>
+                    <label for="dataInicio">Início: <span>*</span></label>
+                    <input type="date" name="dataInicio" id="dataInicio" required>
+                </div>
+                <div>
+                    <label for="dataSaida">Saída: </label>
+                    <input type="date" name="dataSaida" id="dataSaida" required>
+                </div>
+                <div> 
+                    <label for="tipoContrato">Tipo de Contrato: <span>*</span></label>
+                    <select name="tipoContrato" id="tipoContrato" required>
+                        <option value="clt">CLT</option>
+                        <option value="Estagio">Estágio</option>
+                        <option value="Jovem Aprendiz">Jovem Aprendiz</option>
+                        <option value="pj">Pessoa Jurídica</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="descHabilidades"><b>Descrição das habilidades</b> - descrever todas as habilidades profissionais que exerceu na empresa: </label>
+                    <input type="text" name="descHabilidades" id="descHabilidades" required>
+                </div>
+            </div>
+
+            <h2>Auto descrição</h2>
+            <div class="section-form">
+                <div>
+                    <label for=""><b>Resumo Profissional</b> - descreva um resumo das habilidades profissionais: </label>
+                    <textarea name="resumoProfissional" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for=""><b>Objetivos</b> - Coloque seus objetivos profissionais de forma resumida: </label>
+                    <textarea name="objetivoProfissional" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <input type="submit" value="Salvar e prosseguir">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./src/script/script.js"></script>
+</body>
+</html>

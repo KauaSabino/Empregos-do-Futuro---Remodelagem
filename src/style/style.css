@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 78px;
+    box-shadow: 0px 4px 10px #006db625;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    margin: 0 15px;
+}
+a{
+    text-decoration: none;
+    color: #006DB6;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+}
+a:hover{
+    text-decoration:underline;
+}
+#banner{
+    width: 100%;
+    margin-bottom: 50px;
+}
+#coluna{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+    gap: 100px;
+}
+#filtro{
+    width: 40%;
+    max-width: 300px;
+    height: 260px;
+    background: #006DB6;
+    color: #fff;
+    border-radius: 20px;
+    padding: 22px 27px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#filtro h3{
+    font-size: 25px;
+}
+#filtro>form>label{
+    font-size: 16px;
+}
+#filtro>form>input, #filtro>form>select{
+    width: 100%;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+#vagas{
+    width: 100%;
+}
+#subt-vagas{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#subt-vagas h2{
+    font-family: "Roboto", sans-serif;
+}
+.box-vaga{
+    width: 100%;
+    height: 175px;
+    background: #98bed754;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+    padding: 10px 0 10px 38px;
+    margin-bottom: 34px;
+}
+.box-vaga>ul{
+    display: flex;
+    height: 100%;
+    align-items: end;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+.texto>a{
+    color: #000;
+}
+.texto>h3{
+    font-family: "Noto Sans", sans-serif;
+    
+}
+.texto>p{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    color: #2c2c2ccf;
+}
+.icon{
+    font-size: 45px;
+    color: #006DB6;
+}
